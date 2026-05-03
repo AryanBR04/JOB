@@ -1,0 +1,149 @@
+/**
+ * KodNest Premium Build System — Global Layout
+ * [Top Bar] → [Context Header] → [Workspace + Panel] → [Proof Footer]
+ */
+
+/* ─── Page shell ─── */
+.kn-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Top Bar ─── */
+.kn-topbar {
+  height: var(--kn-topbar-height);
+  padding: 0 var(--kn-space-3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  background-color: var(--kn-color-bg);
+  flex-shrink: 0;
+}
+
+.kn-topbar__project {
+  font-family: var(--kn-body-font);
+  font-size: var(--kn-body-size);
+  font-weight: 600;
+  color: var(--kn-color-text);
+}
+
+.kn-topbar__progress {
+  font-size: var(--kn-body-size);
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.kn-topbar__status {
+  /* Status badge: use .kn-badge */
+}
+
+/* ─── Context Header ─── */
+.kn-context-header {
+  padding: var(--kn-context-header-padding);
+  padding-left: var(--kn-space-3);
+  padding-right: var(--kn-space-3);
+  border-bottom: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  flex-shrink: 0;
+}
+
+.kn-context-header__headline {
+  font-family: var(--kn-heading-font);
+  font-size: var(--kn-heading-size-1);
+  font-weight: var(--kn-heading-weight);
+  line-height: var(--kn-heading-line-height);
+  letter-spacing: var(--kn-heading-letter-spacing);
+  color: var(--kn-color-text);
+  margin: 0;
+}
+
+.kn-context-header__subtext {
+  font-size: var(--kn-body-size);
+  color: rgba(17, 17, 17, 0.6);
+  margin: var(--kn-space-1) 0 0 0;
+  max-width: var(--kn-text-max-width);
+}
+
+/* ─── Main content: Workspace + Secondary Panel ─── */
+.kn-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.kn-workspace {
+  width: var(--kn-workspace-ratio);
+  padding: var(--kn-space-4) var(--kn-space-3);
+  overflow: auto;
+}
+
+.kn-panel {
+  width: var(--kn-panel-ratio);
+  padding: var(--kn-space-3);
+  border-left: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  background-color: var(--kn-color-bg);
+  overflow: auto;
+}
+
+.kn-panel__title {
+  font-family: var(--kn-body-font);
+  font-size: var(--kn-body-size);
+  font-weight: 600;
+  color: var(--kn-color-text);
+  margin: 0 0 var(--kn-space-2) 0;
+}
+
+.kn-panel__description {
+  font-size: var(--kn-body-size);
+  color: rgba(17, 17, 17, 0.6);
+  margin: 0 0 var(--kn-space-3) 0;
+  line-height: var(--kn-body-line-height);
+}
+
+/* ─── Proof Footer (persistent bottom) ─── */
+.kn-proof-footer {
+  width: 100%;
+  min-height: var(--kn-footer-min-height);
+  padding: var(--kn-space-2) var(--kn-space-3);
+  border-top: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  background-color: var(--kn-color-bg);
+  flex-shrink: 0;
+}
+
+.kn-proof-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-2) var(--kn-space-4);
+  align-items: center;
+}
+
+.kn-proof-footer__item {
+  display: flex;
+  align-items: center;
+  gap: var(--kn-space-1);
+  font-size: var(--kn-body-size);
+  color: var(--kn-color-text);
+}
+
+.kn-proof-footer__checkbox {
+  width: 18px;
+  height: 18px;
+  border: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--kn-radius);
+  background: var(--kn-color-bg);
+  cursor: pointer;
+  transition: border-color var(--kn-transition), background-color var(--kn-transition);
+}
+
+.kn-proof-footer__checkbox:focus {
+  outline: none;
+  border-color: var(--kn-color-accent);
+}
+
+.kn-proof-footer__checkbox:checked {
+  background-color: var(--kn-color-accent);
+  border-color: var(--kn-color-accent);
+}

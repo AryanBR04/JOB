@@ -1,0 +1,23 @@
+.context-header {
+  padding: var(--space-4) var(--space-4);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.context-title {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+}
+
+.context-description {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  color: #555555;
+  max-width: 720px;
+  margin: 0;
+}

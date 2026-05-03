@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KodNest Premium Build System — Reference</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="kn-page">
+  <!-- Top Bar -->
+  <header class="kn-topbar">
+    <span class="kn-topbar__project">Project Alpha</span>
+    <span class="kn-topbar__progress">Step 2 / 5</span>
+    <span class="kn-badge kn-badge--progress">In Progress</span>
+  </header>
+
+  <!-- Context Header -->
+  <section class="kn-context-header">
+    <h1 class="kn-context-header__headline">Define your requirements</h1>
+    <p class="kn-context-header__subtext">Describe what you want to build so we can generate the right setup.</p>
+  </section>
+
+  <!-- Main: Workspace + Panel -->
+  <main class="kn-main">
+    <div class="kn-workspace">
+      <div class="kn-card kn-mb-3">
+        <h3 class="kn-card__title">Primary workspace</h3>
+        <p class="kn-card__body">Main product interaction lives here. Clean cards, predictable components.</p>
+      </div>
+      <div class="kn-card kn-mb-3">
+        <h3 class="kn-card__title">Another card</h3>
+        <p class="kn-card__body">Balanced padding, subtle border, no drop shadows.</p>
+      </div>
+      <!-- Error card example -->
+      <div class="error-card kn-mb-3">
+        <h3 class="error-card__title">Connection failed</h3>
+        <p class="error-card__message">The request timed out before the server responded.</p>
+        <p class="error-card__fix">Check your network and try again. If it persists, retry in a few minutes.</p>
+      </div>
+      <!-- Empty state example -->
+      <div class="empty-state">
+        <p class="empty-state__title">No items yet</p>
+        <p class="empty-state__hint">Add your first item to get started.</p>
+        <button type="button" class="kn-btn kn-btn--primary">Add item</button>
+      </div>
+    </div>
+
+    <aside class="kn-panel">
+      <h2 class="kn-panel__title">Step explanation</h2>
+      <p class="kn-panel__description">Short copy. Clear purpose. No hype language.</p>
+      <textarea class="kn-prompt-box" rows="4" placeholder="Paste or edit prompt…"></textarea>
+      <div class="kn-panel-actions">
+        <button type="button" class="kn-btn kn-btn--primary">Copy</button>
+        <button type="button" class="kn-btn kn-btn--secondary">Build in Lovable</button>
+        <button type="button" class="kn-btn kn-btn--secondary">It Worked</button>
+        <button type="button" class="kn-btn kn-btn--secondary">Error</button>
+        <button type="button" class="kn-btn kn-btn--secondary">Add Screenshot</button>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Proof Footer -->
+  <footer class="kn-proof-footer">
+    <ul class="kn-proof-footer__list">
+      <li class="kn-proof-footer__item">
+        <input type="checkbox" id="proof-ui" class="kn-proof-footer__checkbox" aria-label="UI Built">
+        <label for="proof-ui">UI Built</label>
+      </li>
+      <li class="kn-proof-footer__item">
+        <input type="checkbox" id="proof-logic" class="kn-proof-footer__checkbox" aria-label="Logic Working">
+        <label for="proof-logic">Logic Working</label>
+      </li>
+      <li class="kn-proof-footer__item">
+        <input type="checkbox" id="proof-test" class="kn-proof-footer__checkbox" aria-label="Test Passed">
+        <label for="proof-test">Test Passed</label>
+      </li>
+      <li class="kn-proof-footer__item">
+        <input type="checkbox" id="proof-deployed" class="kn-proof-footer__checkbox" aria-label="Deployed">
+        <label for="proof-deployed">Deployed</label>
+      </li>
+    </ul>
+  </footer>
+</body>
+</html>

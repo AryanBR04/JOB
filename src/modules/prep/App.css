@@ -1,0 +1,89 @@
+.workspace-grid {
+  display: flex;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.primary-workspace {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.secondary-panel {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.mt-4 {
+  margin-top: var(--space-4);
+}
+
+.prompt-box {
+  background-color: #F5F5F5;
+  border: 1px solid var(--color-border);
+  padding: 12px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: var(--space-3);
+}
+
+.copy-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.panel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.panel-status-actions {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2);
+}
+
+.text-action {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.text-action:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.text-action.success {
+  color: var(--color-success);
+}
+
+.text-action.error {
+  color: var(--color-accent); /* Using Deep Red for Error action */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workspace-grid {
+    flex-direction: column;
+  }
+}

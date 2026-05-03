@@ -1,0 +1,240 @@
+/**
+ * KodNest Premium Build System — Components
+ * Same hover, same border radius. Clean borders, no drop shadows.
+ */
+
+/* ─── Buttons ─── */
+.kn-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--kn-button-height);
+  padding: 0 var(--kn-space-2);
+  font-family: var(--kn-body-font);
+  font-size: var(--kn-body-size);
+  font-weight: 600;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid transparent;
+  cursor: pointer;
+  transition: background-color var(--kn-transition), border-color var(--kn-transition), color var(--kn-transition);
+}
+
+.kn-btn:focus {
+  outline: none;
+}
+
+.kn-btn:focus-visible {
+  outline: 2px solid var(--kn-color-accent);
+  outline-offset: 2px;
+}
+
+/* Primary: solid deep red */
+.kn-btn--primary {
+  background-color: var(--kn-color-accent);
+  color: #fff;
+  border-color: var(--kn-color-accent);
+}
+
+.kn-btn--primary:hover {
+  background-color: #6d0000;
+  border-color: #6d0000;
+}
+
+/* Secondary: outlined */
+.kn-btn--secondary {
+  background-color: transparent;
+  color: var(--kn-color-text);
+  border-color: var(--kn-color-border);
+}
+
+.kn-btn--secondary:hover {
+  border-color: var(--kn-color-text);
+  color: var(--kn-color-text);
+}
+
+.kn-btn + .kn-btn {
+  margin-left: var(--kn-space-2);
+}
+
+/* ─── Status badge (Top Bar right) ─── */
+.kn-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  font-family: var(--kn-body-font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  background-color: var(--kn-color-bg);
+  color: var(--kn-color-text);
+}
+
+.kn-badge--shipped {
+  border-color: var(--kn-color-success);
+  color: var(--kn-color-success);
+}
+
+.kn-badge--progress {
+  border-color: var(--kn-color-warning);
+  color: var(--kn-color-warning);
+}
+
+.kn-badge--not-started {
+  color: rgba(17, 17, 17, 0.6);
+}
+
+/* ─── Inputs ─── */
+.kn-input {
+  width: 100%;
+  min-height: var(--kn-input-height);
+  padding: 0 var(--kn-space-2);
+  font-family: var(--kn-body-font);
+  font-size: var(--kn-body-size);
+  color: var(--kn-color-text);
+  background-color: var(--kn-color-bg);
+  border: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--kn-radius);
+  transition: border-color var(--kn-transition);
+}
+
+.kn-input::placeholder {
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.kn-input:focus {
+  outline: none;
+  border-color: var(--kn-color-accent);
+}
+
+.kn-input:hover:not(:focus) {
+  border-color: rgba(17, 17, 17, 0.35);
+}
+
+.kn-textarea {
+  min-height: 100px;
+  padding: var(--kn-space-2);
+  resize: vertical;
+}
+
+/* ─── Cards ─── */
+.kn-card {
+  padding: var(--kn-card-padding);
+  border: var(--kn-card-border);
+  border-radius: var(--kn-radius);
+  background-color: var(--kn-color-bg);
+  transition: border-color var(--kn-transition);
+}
+
+.kn-card:hover {
+  border-color: rgba(17, 17, 17, 0.35);
+}
+
+.kn-card__title {
+  font-family: var(--kn-body-font);
+  font-size: var(--kn-body-size);
+  font-weight: 600;
+  color: var(--kn-color-text);
+  margin: 0 0 var(--kn-space-2) 0;
+}
+
+.kn-card__body {
+  font-size: var(--kn-body-size);
+  color: var(--kn-color-text);
+  margin: 0;
+  line-height: var(--kn-body-line-height);
+}
+
+/* ─── Secondary Panel: prompt box + actions ─── */
+.kn-prompt-box {
+  width: 100%;
+  min-height: 80px;
+  padding: var(--kn-space-2);
+  font-family: var(--kn-body-font);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--kn-color-text);
+  background-color: var(--kn-color-bg);
+  border: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  border-radius: var(--kn-radius);
+  resize: vertical;
+  transition: border-color var(--kn-transition);
+}
+
+.kn-prompt-box:focus {
+  outline: none;
+  border-color: var(--kn-color-accent);
+}
+
+.kn-panel-actions {
+  margin-top: var(--kn-space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-2);
+}
+
+.kn-panel-actions .kn-btn {
+  margin-left: 0;
+}
+
+/* ─── Error state (calm, accent as small indicator only, no red backgrounds) ─── */
+.kn-error,
+.error-card {
+  padding: var(--kn-space-2) var(--kn-space-2) var(--kn-space-2) var(--kn-space-3);
+  border: var(--kn-border-width) solid rgba(17, 17, 17, 0.12);
+  border-left-width: 3px;
+  border-left-color: var(--kn-color-accent);
+  border-radius: var(--kn-radius);
+  background-color: var(--kn-color-bg);
+  transition: border-color var(--kn-transition);
+}
+
+.kn-error__title,
+.error-card__title {
+  font-weight: 600;
+  color: var(--kn-color-text);
+  margin: 0 0 var(--kn-space-1) 0;
+}
+
+.kn-error__message,
+.error-card__message {
+  font-size: var(--kn-body-size);
+  color: var(--kn-color-text);
+  margin: 0 0 var(--kn-space-1) 0;
+}
+
+.kn-error__fix,
+.error-card__fix {
+  font-size: var(--kn-body-size);
+  color: rgba(17, 17, 17, 0.6);
+  margin: 0;
+}
+
+/* ─── Empty state (neutral, action-oriented, no illustrations/emojis/hype) ─── */
+.kn-empty,
+.empty-state {
+  padding: var(--kn-space-4);
+  text-align: center;
+  border: var(--kn-border-width) dashed rgba(17, 17, 17, 0.12);
+  border-radius: var(--kn-radius);
+  background-color: var(--kn-color-bg);
+}
+
+.kn-empty__title,
+.empty-state__title {
+  font-weight: 600;
+  color: var(--kn-color-text);
+  margin: 0 0 var(--kn-space-1) 0;
+}
+
+.kn-empty__hint,
+.empty-state__hint {
+  font-size: var(--kn-body-size);
+  color: rgba(17, 17, 17, 0.6);
+  margin: 0 0 var(--kn-space-3) 0;
+}
+
+.kn-empty .kn-btn,
+.empty-state .kn-btn {
+  margin-top: var(--kn-space-2);
+}
